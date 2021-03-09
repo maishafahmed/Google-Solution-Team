@@ -41,11 +41,13 @@ class _ChooseUserState extends State<ChooseUser> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              FlatButton(onPressed: () {Navigator.pushNamed(context, '/confirm');}, child: Text("temp"), color: Colors.grey,),
               FlatButton(
                 onPressed: () {
                     Navigator.pushNamed(context, '');
                   },
                 height: 60.0,
+                minWidth: 210.0,
                 child: Text(
                   "New User?",
                   style: TextStyle(
