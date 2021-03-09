@@ -15,7 +15,18 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Image.asset(
+              "assets/logo.png",
+              width: 200,
+              height: 200,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
