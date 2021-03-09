@@ -44,7 +44,7 @@ class _ChooseUserState extends State<ChooseUser> {
               FlatButton(onPressed: () {Navigator.pushNamed(context, '/confirm');}, child: Text("temp"), color: Colors.grey,),
               FlatButton(
                 onPressed: () {
-                    Navigator.pushNamed(context, '');
+                    Navigator.pushNamed(context, '/new-user');
                   },
                 height: 60.0,
                 minWidth: 210.0,
