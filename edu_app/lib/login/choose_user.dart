@@ -43,7 +43,7 @@ class _ChooseUserState extends State<ChooseUser> {
             children: [
               FlatButton(
                 onPressed: () {
-                    Navigator.pushNamed(context, '/confirm');
+                    Navigator.pushNamed(context, '');
                   },
                 height: 60.0,
                 child: Text(
