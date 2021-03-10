@@ -20,7 +20,7 @@ class _LoadingState extends State<Loading> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Image.asset(
-              "assets/logo.png",
+              "assets/EduApp.png",
               width: 200,
               height: 200,
             ),

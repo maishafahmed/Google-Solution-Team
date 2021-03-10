@@ -5,6 +5,7 @@ void main() {
     home: ConfirmUser(),
   ));
 }
+
 class ConfirmUser extends StatefulWidget {
   @override
   _ConfirmUserState createState() => _ConfirmUserState();
@@ -19,18 +20,18 @@ class _ConfirmUserState extends State<ConfirmUser> {
         toolbarHeight: 60.0,
         leading: Row(
           children: [
-            SizedBox(width: 10.0,),
+            SizedBox(
+              width: 10.0,
+            ),
             CircleAvatar(
-              backgroundImage: AssetImage("assets/logo.png"),
+              backgroundImage: AssetImage("assets/EduApp.png"),
               radius: 23.0,
             ),
           ],
         ),
         title: Text(
           "Login",
-          style: TextStyle(
-              fontSize: 40.0
-          ),
+          style: TextStyle(fontSize: 40.0),
         ),
         centerTitle: true,
       ),
@@ -48,9 +49,7 @@ class _ConfirmUserState extends State<ConfirmUser> {
                 minWidth: 210.0,
                 child: Text(
                   "Continue",
-                  style: TextStyle(
-                      fontSize: 30.0
-                  ),
+                  style: TextStyle(fontSize: 30.0),
                 ),
                 color: Colors.grey[400],
               ),
@@ -63,9 +62,7 @@ class _ConfirmUserState extends State<ConfirmUser> {
                 minWidth: 210.0,
                 child: Text(
                   "Switch User?",
-                  style: TextStyle(
-                      fontSize: 30.0
-                  ),
+                  style: TextStyle(fontSize: 30.0),
                 ),
                 color: Colors.grey[400],
               ),

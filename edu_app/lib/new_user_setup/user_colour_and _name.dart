@@ -13,7 +13,6 @@ class NewUser extends StatefulWidget {
 }
 
 class _NewUserState extends State<NewUser> {
-
   String _name;
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -21,7 +20,7 @@ class _NewUserState extends State<NewUser> {
   Widget _buildName() {
     return TextFormField(
       decoration: InputDecoration(labelText: "Name"),
-      validator: (String value){
+      validator: (String value) {
         if (value.isEmpty) {
           return "Name is required";
         }
@@ -41,18 +40,18 @@ class _NewUserState extends State<NewUser> {
         toolbarHeight: 60.0,
         leading: Row(
           children: [
-            SizedBox(width: 10.0,),
+            SizedBox(
+              width: 10.0,
+            ),
             CircleAvatar(
-              backgroundImage: AssetImage("assets/logo.png"),
+              backgroundImage: AssetImage("assets/EduApp.png"),
               radius: 23.0,
             ),
           ],
         ),
         title: Text(
           "New User",
-          style: TextStyle(
-              fontSize: 40.0
-          ),
+          style: TextStyle(fontSize: 40.0),
         ),
         centerTitle: true,
       ),
@@ -76,7 +75,8 @@ class _NewUserState extends State<NewUser> {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Column(// Colour picker section
+                Column(
+                  // Colour picker section
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -128,7 +128,8 @@ class _NewUserState extends State<NewUser> {
                       ],
                     ), // end of row 1
                     SizedBox(height: 30.0),
-                    Row( //row 2
+                    Row(
+                      //row 2
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
@@ -181,7 +182,8 @@ class _NewUserState extends State<NewUser> {
                 ),
                 SizedBox(height: 20.0),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 50.0),
                   child: Form(
                     key: _formKey,
                     child: _buildName(),
@@ -190,7 +192,7 @@ class _NewUserState extends State<NewUser> {
                 SizedBox(height: 20.0),
                 FlatButton(
                   onPressed: () {
-                    if(!_formKey.currentState.validate()) {
+                    if (!_formKey.currentState.validate()) {
                       return;
                     }
 
@@ -202,9 +204,7 @@ class _NewUserState extends State<NewUser> {
                   minWidth: 210.0,
                   child: Text(
                     "Continue",
-                    style: TextStyle(
-                        fontSize: 30.0
-                    ),
+                    style: TextStyle(fontSize: 30.0),
                   ),
                   color: Colors.grey[400],
                 ),
