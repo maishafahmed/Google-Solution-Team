@@ -20,18 +20,18 @@ class _ChooseUserState extends State<ChooseUser> {
         toolbarHeight: 60.0,
         leading: Row(
           children: [
-            SizedBox(width: 10.0,),
+            SizedBox(
+              width: 10.0,
+            ),
             CircleAvatar(
-              backgroundImage: AssetImage("assets/logo.png"),
+              backgroundImage: AssetImage("assets/EduApp.png"),
               radius: 23.0,
             ),
           ],
         ),
         title: Text(
           "Login",
-          style: TextStyle(
-              fontSize: 40.0
-          ),
+          style: TextStyle(fontSize: 40.0),
         ),
         centerTitle: true,
       ),
@@ -41,18 +41,22 @@ class _ChooseUserState extends State<ChooseUser> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              FlatButton(onPressed: () {Navigator.pushNamed(context, '/confirm');}, child: Text("temp"), color: Colors.grey,),
               FlatButton(
                 onPressed: () {
-                    Navigator.pushNamed(context, '/new-user');
-                  },
+                  Navigator.pushNamed(context, '/confirm');
+                },
+                child: Text("temp"),
+                color: Colors.grey,
+              ),
+              FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/new-user');
+                },
                 height: 60.0,
                 minWidth: 210.0,
                 child: Text(
                   "New User?",
-                  style: TextStyle(
-                    fontSize: 30.0
-                  ),
+                  style: TextStyle(fontSize: 30.0),
                 ),
                 color: Colors.grey[400],
               ),

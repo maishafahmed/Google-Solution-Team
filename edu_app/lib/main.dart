@@ -5,8 +5,8 @@ import 'package:edu_app/login/confirm_user.dart';
 import 'package:edu_app/new_user_setup/user_colour_and _name.dart';
 
 void main() {
-    runApp(MaterialApp(
-    initialRoute: '/',
+  runApp(MaterialApp(
+    initialRoute: '/choose',
     routes: {
       '/': (context) => Loading(),
       '/choose': (context) => ChooseUser(),
@@ -14,5 +14,4 @@ void main() {
       '/new-user': (context) => NewUser(),
     },
   ));
-
 }
