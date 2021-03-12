@@ -16,16 +16,12 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Image.asset(
-              "assets/EduApp.png",
-              width: 200,
-              height: 200,
-            ),
-          ],
-        ),
+        child: Hero(
+            tag: 'hero',
+            child: SizedBox(
+              height: 500,
+              child: Image.asset('assets/EduApp-v2.png'),
+            )),
       ),
     );
   }
