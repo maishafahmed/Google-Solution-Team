@@ -13,7 +13,7 @@ class NewUser extends StatefulWidget {
 }
 
 class _NewUserState extends State<NewUser> {
-  String _name;
+  String _name; //for username
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -30,6 +30,100 @@ class _NewUserState extends State<NewUser> {
         _name = value;
       },
     );
+  }
+
+  Widget userIcon = Icon(
+    Icons.person_pin,
+    size: 200.0,
+    color: Colors.grey,
+  );
+
+  void _userColourRed() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.red,
+      );
+    });
+  }
+
+  void _userColourOrange() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.orange,
+      );
+    });
+  }
+
+  void _userColourYellow() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.yellow,
+      );
+    });
+  }
+
+  void _userColourGreen() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.green,
+      );
+    });
+  }
+
+  void _userColourBlue() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.blue,
+      );
+    });
+  }
+
+  void _userColourPurple() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.purple,
+      );
+    });
+  }
+
+  void _userColourBlack() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.black,
+      );
+    });
+  }
+
+  void _userColourGrey() {
+    setState(() {
+      // update the text
+      userIcon = Icon(
+        Icons.person_pin,
+        size: 200.0,
+        color: Colors.grey,
+      );
+    });
   }
 
   @override
@@ -62,11 +156,7 @@ class _NewUserState extends State<NewUser> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Icon(
-                  Icons.person_pin,
-                  size: 200.0,
-                  color: Colors.grey,
-                ),
+                userIcon,
                 SizedBox(height: 20.0),
                 Text(
                   "Select a colour",
@@ -85,7 +175,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourRed,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.red,
@@ -96,7 +186,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourOrange,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.orange,
@@ -107,7 +197,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourYellow,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.yellow,
@@ -118,7 +208,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourGreen,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.green,
@@ -136,7 +226,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourBlue,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.blue,
@@ -147,7 +237,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourPurple,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.purple,
@@ -158,7 +248,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourBlack,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.black,
@@ -169,7 +259,7 @@ class _NewUserState extends State<NewUser> {
                           height: 40.0,
                           width: 40.0,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: _userColourGrey,
                             child: Text(""),
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.grey,

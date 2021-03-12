@@ -7,7 +7,7 @@ import 'package:edu_app/home/homepage.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/choose',
+    initialRoute: '/new-user',
     routes: {
       '/': (context) => Loading(),
       '/choose': (context) => ChooseUser(),
