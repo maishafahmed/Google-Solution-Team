@@ -18,16 +18,11 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         backgroundColor: Colors.grey[400],
         toolbarHeight: 60.0,
-        leading: Row(
-          children: [
-            SizedBox(
-              width: 10.0,
-            ),
-            CircleAvatar(
-              backgroundImage: AssetImage("assets/EduApp.png"),
-              radius: 23.0,
-            ),
-          ],
+        leadingWidth: 100.0,
+        leading: Image(
+          image: AssetImage("assets/EduApp-v2.png"),
+          height: 100.0,
+          width: 100.0,
         ),
         title: Text(
           "Home",
@@ -35,9 +30,30 @@ class _HomepageState extends State<Homepage> {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Text("hello"),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                width: 205.0,
+                color: Colors.grey,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text("Math"),
+                ),
+              ),
+              Container(
+                width: 205.0,
+                color: Colors.grey[700],
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text("English"),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       bottomNavigationBar: Row(
         children: [],
