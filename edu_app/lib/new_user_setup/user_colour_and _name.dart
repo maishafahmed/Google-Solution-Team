@@ -14,7 +14,7 @@ class NewUser extends StatefulWidget {
 
 class _NewUserState extends State<NewUser> {
   String _name; //for username
-
+  List<String> usernames;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   Widget _buildName() {
@@ -28,6 +28,7 @@ class _NewUserState extends State<NewUser> {
       },
       onSaved: (String value) {
         _name = value;
+        print(_name);
       },
     );
   }
@@ -282,10 +283,9 @@ class _NewUserState extends State<NewUser> {
                   if (!_formKey.currentState.validate()) {
                     return;
                   }
-
                   _formKey.currentState.save();
 
-                  Navigator.pushNamed(context, '/homepage');
+                  Navigator.pushNamed(context, '/choose');
                 },
                 height: 60.0,
                 minWidth: 210.0,
