@@ -35,20 +35,22 @@ class _HomepageState extends State<Homepage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                width: 205.0,
-                color: Colors.grey,
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text("Math"),
+              Expanded(
+                child: Container(
+                  color: Colors.grey,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text("Math"),
+                  ),
                 ),
               ),
-              Container(
-                width: 205.0,
-                color: Colors.grey[700],
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text("English"),
+              Expanded(
+                child: Container(
+                  color: Colors.grey[700],
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text("English"),
+                  ),
                 ),
               ),
             ],
