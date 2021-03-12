@@ -55,9 +55,6 @@ class _HomepageState extends State<Homepage> {
           ),
         ],
       ),
-      bottomNavigationBar: Row(
-        children: [],
-      ),
     );
   }
 }
