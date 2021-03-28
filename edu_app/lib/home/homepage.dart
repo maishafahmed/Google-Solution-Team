@@ -30,32 +30,17 @@ class _HomepageState extends State<Homepage> {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Container(
-                  color: Colors.grey,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text("Math"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.grey[700],
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text("English"),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+              icon: Icon(Icons.camera_alt),
+              onPressed: () {},
+              iconSize: 50.0,
+            )
+          ],
+        ),
       ),
     );
   }

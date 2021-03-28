@@ -43,7 +43,7 @@ class _ConfirmUserState extends State<ConfirmUser> {
             children: [
               FlatButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '');
+                  Navigator.pushNamed(context, '/homepage');
                 },
                 height: 60.0,
                 minWidth: 210.0,
