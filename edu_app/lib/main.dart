@@ -4,8 +4,12 @@ import 'package:edu_app/login/choose_user.dart';
 import 'package:edu_app/login/confirm_user.dart';
 import 'package:edu_app/new_user_setup/user_colour_and _name.dart';
 import 'package:edu_app/home/homepage.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
-void main() {
+
+
+void main(){
   runApp(MaterialApp(
     initialRoute: '/choose',
     routes: {

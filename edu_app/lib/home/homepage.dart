@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -7,11 +9,25 @@ void main() {
 }
 
 class Homepage extends StatefulWidget {
+
   @override
   _HomepageState createState() => _HomepageState();
 }
 
 class _HomepageState extends State<Homepage> {
+
+  File _image;
+
+  Future getImage(bool isCamera) async {
+    File _image;
+    if(isCamera) {
+      image = await ImagePicker.pickImage(source: ImageSource.camera);
+    }
+    setState((){
+      _image = image;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +52,12 @@ class _HomepageState extends State<Homepage> {
           children: [
             IconButton(
               icon: Icon(Icons.camera_alt),
-              onPressed: () {},
+              onPressed: () {
+
+              },
               iconSize: 50.0,
-            )
+            ),
+            _image == null? Container(): Image.file(_image, height: 300.0, width: 300.0,),
           ],
         ),
       ),
