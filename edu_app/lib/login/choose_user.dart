@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:edu_app/username_list.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -12,6 +13,45 @@ class ChooseUser extends StatefulWidget {
 }
 
 class _ChooseUserState extends State<ChooseUser> {
+  List<User> users = [
+    User(
+        name: 'Matt',
+        colour: Icon(Icons.person_pin, size: 50.0, color: Colors.blue)),
+    User(
+        name: 'Sarah',
+        colour: Icon(Icons.person_pin, size: 50.0, color: Colors.red)),
+    User(
+        name: 'Adam',
+        colour: Icon(Icons.person_pin, size: 50.0, color: Colors.green)),
+  ];
+
+  Widget userTemplate(user) {
+    return Card(
+      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, '/confirm');
+          },
+          child: Row(
+            children: [
+              user.colour,
+              SizedBox(width: 20.0),
+              Text(
+                user.name,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.grey[600],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,14 +79,12 @@ class _ChooseUserState extends State<ChooseUser> {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/confirm');
-                },
-                child: Text("temp"),
-                color: Colors.grey,
+              Container(
+                child: Column(
+                  children: users.map((user) => userTemplate(user)).toList(),
+                ),
               ),
               FlatButton(
                 onPressed: () {
