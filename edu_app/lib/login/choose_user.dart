@@ -76,29 +76,32 @@ class _ChooseUserState extends State<ChooseUser> {
         centerTitle: true,
       ),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                child: Column(
-                  children: users.map((user) => userTemplate(user)).toList(),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  child: Column(
+                    children: users.map((user) => userTemplate(user)).toList(),
+                  ),
                 ),
-              ),
-              FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/new-user');
-                },
-                height: 60.0,
-                minWidth: 210.0,
-                child: Text(
-                  "New User?",
-                  style: TextStyle(fontSize: 30.0),
+                SizedBox(height: 100.0),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/new-user');
+                  },
+                  height: 60.0,
+                  minWidth: 210.0,
+                  child: Text(
+                    "New User?",
+                    style: TextStyle(fontSize: 30.0),
+                  ),
+                  color: Colors.grey[400],
                 ),
-                color: Colors.grey[400],
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
