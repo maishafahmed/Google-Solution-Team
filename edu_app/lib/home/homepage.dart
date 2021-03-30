@@ -34,6 +34,15 @@ class _HomepageState extends State<Homepage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              'Prompt: Write a quote from a movie',
+              style: TextStyle(
+                fontSize: 25.0,
+              ),
+            ),
+            SizedBox(
+              height: 50.0,
+            ),
             IconButton(
               icon: Icon(Icons.camera_alt),
               onPressed: () {
