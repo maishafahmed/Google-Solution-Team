@@ -13,7 +13,7 @@ class ConfirmUser extends StatefulWidget {
 
 class _ConfirmUserState extends State<ConfirmUser> {
   Widget _icon = Icon(Icons.person_pin, size: 200.0, color: Colors.grey);
-  Widget _name = Text('lol');
+  Widget _name = Text('Matt');
 
   @override
   Widget build(BuildContext context) {
