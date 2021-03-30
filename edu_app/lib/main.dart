@@ -5,6 +5,7 @@ import 'package:edu_app/login/confirm_user.dart';
 import 'package:edu_app/new_user_setup/user_colour_and _name.dart';
 import 'package:edu_app/home/homepage.dart';
 import 'package:edu_app/home/camera.dart';
+import 'package:edu_app/home/result.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,6 +17,7 @@ void main() {
       '/new-user': (context) => NewUser(),
       '/homepage': (context) => Homepage(),
       '/camera': (context) => CameraWidget(),
+      '/result': (context) => Result(),
     },
   ));
 }

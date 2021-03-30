@@ -201,7 +201,9 @@ class CameraState extends State<CameraWidget> {
           child: Builder(
             builder: (context) {
               return RaisedButton(
-                onPressed: () => {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/result');
+                },
                 color: Colors.lightBlue,
                 child: Text('Add New Work'),
               );

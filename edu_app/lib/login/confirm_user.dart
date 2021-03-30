@@ -12,6 +12,9 @@ class ConfirmUser extends StatefulWidget {
 }
 
 class _ConfirmUserState extends State<ConfirmUser> {
+  Widget _icon = Icon(Icons.person_pin, size: 200.0, color: Colors.blue);
+  Widget _name = Text('Matt');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +42,12 @@ class _ConfirmUserState extends State<ConfirmUser> {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              SizedBox(height: 20.0),
+              _icon,
+              _name,
+              SizedBox(height: 150.0),
               FlatButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/homepage');

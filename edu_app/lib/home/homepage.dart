@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
-import 'package:image_picker/image_picker.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -36,6 +34,15 @@ class _HomepageState extends State<Homepage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              'Prompt: Write a quote from a movie',
+              style: TextStyle(
+                fontSize: 25.0,
+              ),
+            ),
+            SizedBox(
+              height: 50.0,
+            ),
             IconButton(
               icon: Icon(Icons.camera_alt),
               onPressed: () {
