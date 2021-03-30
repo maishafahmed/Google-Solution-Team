@@ -13,18 +13,6 @@ class ChooseUser extends StatefulWidget {
 }
 
 class _ChooseUserState extends State<ChooseUser> {
-  List<User> users = [
-    User(
-        name: 'Matt',
-        colour: Icon(Icons.person_pin, size: 50.0, color: Colors.blue)),
-    User(
-        name: 'Sarah',
-        colour: Icon(Icons.person_pin, size: 50.0, color: Colors.red)),
-    User(
-        name: 'Adam',
-        colour: Icon(Icons.person_pin, size: 50.0, color: Colors.green)),
-  ];
-
   Widget userTemplate(user) {
     return Card(
       margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
